@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation - KACEL CONSULTING</title>
+    <link rel="stylesheet" href="formation.css">
+    <link rel="stylesheet" href="typography.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><span>K</span>ACEL CONSULTING</a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navbar">
+            <li class="dropdown">
+                <a href="index.html#apropos" class="dropbtn" onclick="toggleDropdown();">Pourquoi Pas Nous ?</a>
+                <div class="dropdown-content">
+                    <a href="index.html#apropos">A propos</a>
+                    <a href="index.html#expert">Experts</a>
+                    <a href="index.html#temoignage">Témoignages</a>
+                    <a href="index.html#Portefeuille">Portefeuille</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="index.html#services" class="dropbtn" onclick="toggleDropdown();">Services</a>
+                <div class="dropdown-content">
+                    <a href="index.html#audit_comptes">Audit et Commissariat aux Comptes</a>
+                    <a href="index.html#conseil">Conseil</a>
+                </div>
+            </li>
+            <li><a href="index.html#formations" class="lien_form" onclick="toggleMenu();">Formations</a></li>
+            <li><a href="index.html#secteurs-activite" onclick="toggleMenu();">Secteurs d'Activité</a></li>
+            <li><a href="index.html#evenements" class="lien_even" onclick="toggleMenu();">Événements</a></li>
+            <li><a href="index.html#contact" onclick="toggleMenu();">Contact</a></li>
+          </ul>
+    </header>
+    <section class="banniere_formation" id="banniere"> 
+        <div class="contenu">
+            <h2>Bienvenue dans l'espace Formation</h2>
+            <!-- Onglets -->
+            <div class="onglets">
+                <button class="onglet" onclick="openTab(event, 'formulaire')">Demandez Votre Formation</button>
+                <button class="onglet" onclick="openTab(event, 'galerie')">Galerie</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="event-detail">
+         <!-- Onglet Demandez Votre Formation -->
+         <div id="formulaire"  class="contenu-onglet">
+            <div class="container">
+                <h2 class="titre-texte">Demandez Votre Formation</h2>
+                <form id="formationForm" action="submit_formation.php" method="POST">
+                    <label for="nom_complet">Nom Complet:</label>
+                    <input type="text" id="nom_complet" name="nom_complet" required>
+        
+                    <label for="email">Adresse E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="telephone">Numéro de Téléphone:</label>
+                    <input type="tel" id="telephone" name="telephone" required>
+        
+                    <label for="type_formation">Type de Formation:</label>
+                    <select id="type_formation" name="type_formation" required>
+                        <option value="finance">Finance</option>
+                        <option value="comptabilite">Comptabilité</option>
+                        <option value="fiscalite">Fiscalité</option>
+                        <option value="audit">Audit</option>
+                    </select>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <input type="submit" value="Envoyer">
+                </form>
+            </div>
+        </div>
+
+      <!-- Onglet Galerie -->
+<div id="galerie" class="contenu-onglet">
+    <h2 class="titre-galerie">LA FORMATION SUR LE SYCEBNL</h2>
+    <div class="galerie-container">
+        <div class="galerie-item">
+            <a href="images/formation1-large.jpg" data-lightbox="formation" data-title="Formation SYCEBNL 1">
+                <img src="images/formation1-large.jpg" alt="Formation SYCEBNL 1">
+            </a>
+        </div>
+        <div class="galerie-item">
+            <a href="images/formation2-large.jpg" data-lightbox="formation" data-title="Formation SYCEBNL 2">
+                <img src="images/formation2-large.jpg" alt="Formation SYCEBNL 2">
+            </a>
+        </div>
+        <div class="galerie-item">
+            <a href="images/formation3-large.jpg" data-lightbox="formation" data-title="Formation SYCEBNL 3">
+                <img src="images/formation3-large.jpg" alt="Formation SYCEBNL 3">
+            </a>
+        </div>
+        <div class="galerie-item">
+            <a href="images/formation4-large.jpg" data-lightbox="formation" data-title="Formation SYCEBNL 4">
+                <img src="images/formation4-large.jpg" alt="Formation SYCEBNL 4">
+            </a>
+        </div>
+        <div class="galerie-item">
+            <a href="images/formation5-large.jpg" data-lightbox="formation" data-title="Formation SYCEBNL 5">
+                <img src="images/formation5-large.jpg" alt="Formation SYCEBNL 5">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+    </section>
+    
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2024 KACEL CONSULTING. Tous droits réservés. <a href="#">Mentions légales</a></p>
+        </div>
+    </footer>
+
+    <script src="formation.js"></script>
+    
+</body>
+</html>

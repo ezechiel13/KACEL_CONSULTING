@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Kacel Consulting</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><span>K</span>ACEL CONSULTING</a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navbar">
+            <li class="dropdown">
+                <a href="index.html#apropos" class="dropbtn" onclick="toggleDropdown();">Pourquoi Pas Nous ?</a>
+                <div class="dropdown-content">
+                    <a href="index.html#apropos">A propos</a>
+                    <a href="index.html#expert">Experts</a>
+                    <a href="index.html#temoignage">Témoignages</a>
+                    <a href="index.html#Portefeuille">Portefeuille</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="index.html#services" class="dropbtn" onclick="toggleDropdown();">Services</a>
+                <div class="dropdown-content">
+                    <a href="index.html#audit_comptes">Audit et Commissariat aux Comptes</a>
+                    <a href="index.html#conseil">Conseil</a>
+                </div>
+            </li>
+            <li><a href="index.html#formations" class="lien_form" onclick="toggleMenu();">Formations</a></li>
+            <li><a href="index.html#secteurs-activite" onclick="toggleMenu();">Secteurs d'Activité</a></li>
+            <li><a href="index.html#evenements" class="lien_even" onclick="toggleMenu();">Événements</a></li>
+            <li><a href="index.html#contact" onclick="toggleMenu();">Contact</a></li>
+          </ul>
+    </header>
+
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Connexion</h2>
+            <form id="loginForm" method="post" action="login_process.php">
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-box">
+                    <label for="mot_de_passe">Mot de passe</label>
+                    <input type="password" id="mot_de_passe" name="mot_de_passe" required>
+                </div>
+                <button type="submit" class="btn">Se connecter</button>
+                <div id="error-message"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js"></script> <!-- Inclusion du fichier JavaScript -->
+</body>
+</html>

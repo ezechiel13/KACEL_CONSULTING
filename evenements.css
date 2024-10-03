@@ -1,0 +1,685 @@
+/* Style général */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Times New Roman', Times, serif, sans-serif;
+    scroll-behavior: smooth;
+}
+
+p {
+    font-weight: 300;
+    color: #111;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 10px;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4B0082;
+    transition: 0.5s;
+}
+
+.logo {
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #9370DB;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+}
+
+.navbar li {
+    list-style: none;
+    position: relative;
+}
+
+.navbar a {
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 700;
+    color: #fff;
+    padding: 10px 10px;
+    position: relative;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar .dropbtn {
+    color: #d5001c;
+}
+
+.navbar .lien_form {
+    color: #d5001c;
+}
+
+.navbar .lien_even {
+    color: #d5001c;
+}
+
+/* Effet hover personnalisé pour chaque lien */
+.navbar li:hover > a {
+    color: #9370DB;
+    background-color: rgba(107, 21, 199, 0.15);
+    padding: 15px 30px 20px;
+}
+
+.navbar li:hover > a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(56, 2, 80, 0.8);
+    transition: background-color 0.3s ease;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 200px;
+    left: 0;
+    top: 100%;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-content a {
+    color: #4B0082;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+}
+
+.dropdown-content a:hover {
+    background-color: #4B0082;
+    color: #e4e4e4;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown-content.active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Mobile Menu */
+.menuToggle {
+    display: none;
+}
+
+/* Modifications pour un comportement plus intuitif */
+.dropdown-content.active {
+    display: block; /* Assurez-vous que le menu soit visible */
+    visibility: visible;
+    opacity: 1;
+}
+
+/* État du lien actif */
+.navbar li.active > a {
+    color: #9370DB; /* Couleur du lien actif */
+    background-color: rgba(107, 21, 199, 0.15);
+}
+
+/* Ajustements du dropdown sur mobile */
+@media (max-width: 768px) {
+    .navbar.active {
+        display: flex; /* Affichez le menu mobile */
+        max-height: 300px; /* Ajustable selon le nombre de liens */
+    }
+    
+    .dropdown-content {
+        position: relative; /* Ajustez la position */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #ae91c3;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        z-index: 10;
+        transition: all 0.3s ease-in-out;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .navbar.active {
+        display: flex;
+        max-height: 300px; /* Ajustable selon le nombre de liens */
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        text-align: center;
+        padding: 8px 0;
+        margin: 0;
+        color: #fff;
+    }
+
+    .dropdown-content {
+        position: relative;
+        top: 0;
+        flex-direction: column;
+    }
+
+    .menuToggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 30px;
+        height: 30px;
+        background: url('./images/menu.jpg') no-repeat center;
+        background-size: contain;
+        cursor: pointer;
+        z-index: 1001; /* Assurez-vous que le menu soit toujours visible */
+    }
+
+    .menuToggle.active {
+        background: url('./images/close.jpg') no-repeat center;
+        background-size: contain;
+    }
+
+    .logo {
+        font-size: 1.5em;
+    }
+
+    .dropdown-content a {
+        padding: 8px;
+        font-size: 14px;
+        
+    }
+
+    .navbar li:hover > a {
+        padding: 10px 20px;
+    }
+}
+
+/* Sticky header */
+header.sticky {
+    background:#fff;
+    padding: 10px 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+header.sticky .logo {
+    color: #4B0082;
+}
+header.sticky .navbar li a {
+    color: #4B0082;
+}
+
+header.sticky li a:hover {
+    color: #9370DB;
+}
+
+header.sticky .navbar .dropdown-content a {
+    color: #4B0082;
+}
+
+header.sticky .navbar .dropdown-content a:hover {
+    color: #e27e26;
+    background-color: rgba(125, 7, 164, 0.05);
+}
+
+
+
+
+/* Styles pour les onglets */
+.onglets {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.onglet {
+    background-color: #4CAF50; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 15px; /* Espacement */
+    border: none; /* Pas de bordure */
+    cursor: pointer; /* Pointeur lors du survol */
+    transition: background-color 0.3s; /* Transition douce */
+}
+
+.onglet:hover {
+    background-color: #45a049; /* Couleur de fond lors du survol */
+}
+
+
+.onglet:hover, .onglet.active {
+    background-color: #9370DB;
+}
+
+
+/* SECTION EVENT DETAIL */
+.event-detail {
+    padding: 100px 50px;
+    background-color: #fff;
+}
+
+.event-detail .onglets {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.event-detail .onglet {
+    padding: 10px 20px;
+    background-color: #4B0082;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.event-detail .onglet:hover, .event-detail .onglet.active {
+    background-color: #9370DB;
+}
+
+.contenu-onglet {
+    display: none;
+}
+
+.contenu-onglet.show {
+    display: block;
+}
+
+.event-detail h2 {
+    font-size: 2.5em;
+    color: #4B0082;
+    margin-bottom: 20px;
+}
+
+.event-detail p, .event-detail ul {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.event-detail ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.event-detail ul li {
+    margin-bottom: 10px;
+}
+
+/* FORMULAIRE D'INSCRIPTION */
+.event-detail form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-detail form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #4B0082;
+}
+
+.event-detail form input, .event-detail form textarea, .event-detail form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.event-detail form input[type="submit"], .event-detail .btn1 {
+    background-color: #4B0082;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.event-detail form input[type="submit"]:hover, .event-detail .btn1:hover {
+    background-color: #9370DB;
+}
+
+.event-detail form input[type="checkbox"], .event-detail form input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .event-detail {
+        padding: 50px 20px;
+    }
+
+    .event-detail h2 {
+        font-size: 2em;
+    }
+
+    .event-detail .onglets {
+        flex-direction: column;
+    }
+
+    .event-detail .onglet {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-detail h2 {
+        font-size: 1.8em;
+    }
+
+    .event-detail form {
+        gap: 15px;
+    }
+}
+
+/* Styles pour les onglets */
+.onglets {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.onglet {
+    margin: 10px 10px;
+    padding: 20px 20px;
+    background-color: #4B0082;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.onglet:hover, .onglet.active {
+    background-color: #9370DB;
+}
+
+
+/* Boutons */
+.banniere a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: #fff;
+    background: #4B0082; /* Couleur de fond des boutons */
+    border-radius: 5px;
+}
+
+.banniere a:hover {
+    background: #6a0dad; /* Couleur de fond des boutons au survol */
+}
+
+
+/* Boutons */
+.btn1, .btn2 {
+    font-size: 1em;
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.btn1 {
+    background: #4B0082;
+}
+
+.btn2 {
+    background: #9370DB;
+}
+
+.btn1:hover, .btn2:hover {
+    letter-spacing: 4px;
+}
+
+.banniere_evenements{
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/baniere_evenement.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Couleur du texte */
+    padding: 20px;
+    overflow: hidden;
+    margin-top: 80px; /* Ajouter une marge pour éviter le chevauchement avec la barre de navigation */
+}
+
+.banniere_evenements .contenu{
+    text-align: center;
+    max-width: 90%; /* Augmenter la largeur maximale pour petits écrans */
+    z-index: 1; /* Assure que le texte est au-dessus de tout autre contenu */
+    position: relative;
+} 
+
+.banniere_evenements h2{
+    font-size: 2.5em; /* Réduit la taille de police pour améliorer la lisibilité sur les petits écrans */
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    color: #fff;
+
+}
+
+/* Styles pour les onglets */
+.onglets {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.onglet {
+    margin: 10px 10px;
+    padding: 20px 20px;
+    background-color: #4B0082;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.onglet:hover, .onglet.active {
+    background-color: #9370DB;
+}
+
+
+/* Boutons */
+.banniere a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: #fff;
+    background: #4B0082; /* Couleur de fond des boutons */
+    border-radius: 5px;
+}
+
+.banniere a:hover {
+    background: #6a0dad; /* Couleur de fond des boutons au survol */
+}
+
+
+/* Boutons */
+.btn1, .btn2 {
+    font-size: 1em;
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.btn1 {
+    background: #4B0082;
+}
+
+.btn2 {
+    background: #9370DB;
+}
+
+.btn1:hover, .btn2:hover {
+    letter-spacing: 4px;
+}
+
+/* Styles pour la section Galerie */
+#galerie {
+    padding: 60px;
+    background-color: #f9f9f9;
+}
+
+#galerie h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #4B0082;
+    margin-bottom: 50px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grille responsive */
+    gap: 30px; /* Espace entre les éléments de la grille */
+}
+
+.event {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Évite que les images débordent */
+}
+
+.event:hover {
+    transform: translateY(-5px);
+}
+
+.event h3 {
+    font-size: 1.5rem;
+    color: #ef0893;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.event-images {
+    display: flex; /* Utilisation de flexbox pour la disposition des images */
+    flex-wrap: wrap; /* Permettre aux images de passer à la ligne */
+    justify-content: space-between; /* Répartir l'espace entre les images */
+    margin-top: 10px;
+}
+
+.event-images a {
+    flex: 1 1 calc(33% - 20px); /* 3 images par ligne avec un écart de 20px */
+    margin-bottom: 10px; /* Ajouter un espace en bas pour éviter le chevauchement */
+    position: relative; /* Position relative pour les images */
+}
+
+.event-images img {
+    width: 100%; /* Prendre toute la largeur du conteneur */
+    height: auto; /* Garder le rapport d'aspect */
+    max-height: 200px; /* Limiter la hauteur maximale */
+    object-fit: cover; /* Remplir l'espace sans déformation */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-images img:hover {
+    transform: scale(1.05); /* Élargir l'image au survol */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .event-images a {
+        flex: 1 1 calc(50% - 20px); /* 2 images par ligne sur petits écrans */
+    }
+
+    .event-images img {
+        max-height: 150px; /* Limiter la hauteur sur les petits écrans */
+    }
+
+    #galerie h2 {
+        font-size: 2rem;
+    }
+
+    .event h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-images a {
+        flex: 1 1 100%; /* 1 image par ligne sur très petits écrans */
+    }
+}
+
+/* Footer */
+.copyright {
+    padding: 20px 40px;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    background: #E0E0E0;
+    text-align: center;
+}
+
+.copyright p {
+    color: #333;
+}
+
+.copyright a {
+    color: #4B0082;
+    text-decoration: none;
+    font-weight: 600;
+    font-style: italic;
+}

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KACEL CONSULTING, cabinet spécialisé en audit, conseil et formation, accompagne les entreprises dans leur développement stratégique, financier et opérationnel.">
+    <link rel="stylesheet" href="typography.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>KACEL CONSULTING</title>
+</head> 
+<body>
+    <header>
+        <a href="index.html" class="logo"><span>K</span>ACEL CONSULTING</a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navbar">
+            <li class="dropdown"> 
+                <a href="#" class="dropbtn" onclick="toggleDropdown();">Pourquoi Pas Nous ?</a>
+                <div class="dropdown-content">
+                    <a href="#apropos">A propos</a>
+                    <a href="#expert">Experts</a>
+                    <a href="#temoignage">Témoignages</a>
+                    <a href="#Portefeuille">Portefeuille</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#services" class="dropbtn" onclick="toggleDropdown();">Services</a>
+                <div class="dropdown-content">
+                    <a href="#audit_comptes">Audit et Commissariat aux Comptes</a>
+                    <a href="#conseil">Conseil</a>
+                </div>
+            </li>
+            <li><a href="#formations" class="lien_form" onclick="toggleMenu();">Formations</a></li>
+            <li><a href="#secteurs-activite" onclick="toggleMenu();">Secteurs d'Activité</a></li>
+            <li><a href="#evenements" class="lien_even" onclick="toggleMenu();">Événements</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+          </ul>
+    </header>
+    
+    <section class="banniere" id="banniere">
+        <div class="contenu">
+            <h2>Votre partenaire en audit, conseil et formation</h2>
+            <p id="texte-defilant">
+                Le forum « In’ Tech » à Abidjan, les <span>5</span> et <span>6</span> décembre 2024, explorera les innovations technologiques en Côte d'Ivoire.                
+                <a href="evenements.html" class="btn3">En savoir plus</a>
+            </p>
+            <a href="#services" class="btn1">Nos Services</a>
+            <a href="#contact" class="btn2">Contactez-nous</a>
+        </div>
+    </section>
+    
+
+
+    <section class="apropos" id="apropos">
+        <div class="row">
+            <div class="col50 texte">
+                <h2 class="titre-texte"><span>À</span> Propos de Nous</h2>
+                <p>KACEL CONSULTING est un cabinet, créé en 2018, spécialisé en conseil, audit et formation sur les aspects comptables, financiers, fiscaux, sociaux, opérationnels et stratégiques des organisations.
+                    Notre structure vous accompagne pour répondre aux enjeux et problématiques de stratégie, de gestion et de finance d’entreprise afin de vous apporter de la valeur ajoutée.
+                    Notre accompagnement vous permet de répondre aux exigences légales, réglementaires et de marchés nécessaires à votre développement.
+                    Nous sommes à vos côtés pour identifier, exploiter, analyser et produire des données financières et non financières utiles pour vous et vos parties prenantes.
+                    Kacel consulting est un cabinet composé de consultants via son réseau de partenaires d’experts multidisciplinaires.
+                </p>
+            </div>
+            <div class="col50 image">
+                <div class="img-container">
+                    <img src="./images/KACEL_CDV_blanc_verso.jpg" alt="À propos de KACEL">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+<section class="expert" id="expert">
+    <div class="titre">
+        <h2 class="titre-texte">Nos <span>E</span>xperts</h2>
+        <p>Les experts de Kacel Consulting vous offrent un accompagnement de qualité dans les domaines comptables, financiers, fiscaux et stratégiques. Notre cabinet, créé en 2018, est composé de consultants et d'un réseau de partenaires multidisciplinaires spécialisés dans le conseil, l'audit et la formation. Grâce à leur expertise, nous vous aidons à répondre aux exigences légales et de marché tout en maximisant la valeur ajoutée pour votre entreprise.</p>
+    </div>    
+    <div class="contenu">
+        <div class="box">
+            <div class="imbox">
+                <img src="./images/Expert - Audit et Conseil.jpg" alt="Expert Franck leroi">
+            </div>
+            <div class="text">
+                <h3>Expert en Audit et Conseil</h3>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imbox">
+                <img src="./images/Expert – Conseil.jpg" alt="Expert Franck leroi">
+            </div>
+            <div class="text">
+                <h3>Expert en Conseil</h3>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imbox">
+                <img src="./images/Expert-Audit.png" alt="Expert Franck leroi">
+            </div>
+            <div class="text">
+                <h3>Expert en Audit</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="temoignage" id="temoignage">
+    <div class="titre blanc">
+        <h2 class="titre-texte">Que Disent Nos <span>C</span>lients</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+    </div>
+    <div class="contenu">
+        <div class="box">
+            <div class="imbox">
+                <img src="./images/t1.jpeg" alt="Photo du client Franck Leroi">
+            </div>
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                <h3>Franck Leroi</h3>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imbox">
+                <img src="./images/t2.jpg" alt="Photo du client Franck Leroi">
+            </div>
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                <h3>Franck Leroi</h3>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imbox">
+                <img src="./images/t3.jpg" alt="Photo du client Franck Leroi">
+            </div>
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                <h3>Franck Leroi</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="Portefeuille" id="Portefeuille">
+    <div class="titre">
+     <h2 class="titre-texte">Ils <span>nous</span> ont fait confiance</h2>
+    </div>    
+    <div class="logo-grid">
+        <div class="logo-item">
+            <img src="images/logo1.png" alt="Logo 1">
+        </div>
+        <div class="logo-item">
+            <img src="images/logo2.jpg" alt="Logo 2">
+        </div>
+        <div class="logo-item">
+            <img src="images/logo3.jpg" alt="Logo 3">
+        </div>
+        <div class="logo-item">
+            <img src="images/logo4.png" alt="Logo 4">
+        </div>
+        <div class="logo-item">
+            <img src="images/logo5.png" alt="Logo 5">
+        </div>
+        <div class="logo-item">
+            <img src="images/logo6.jpg" alt="Logo 6">
+        </div>
+        <div class="logo-item">
+            <img src="images/logo7.jpg" alt="Logo 7">
+        </div>
+        <div class="logo-item">
+            <img src="images/logo8.jpg" alt="Logo 8">
+        </div>
+        <div class="logo-item">
+            <img src="images/logo9.png" alt="Logo 9">
+        </div>
+        <div class="logo-item">
+            <img src="images/logo10.jpg" alt="Logo 10">
+        </div>
+        <div class="logo-item">
+            <img src="images/logo11.png" alt="Logo 11">
+        </div>
+    </div>
+</section>
+
+
+
+<section class="services"> 
+    <div class="titre1">
+        <h2 class="titre-texte" id="services"><span>S</span>ervices</h2>
+    </div>  
+
+    <!-- Section Audit et Commissariat aux Comptes -->
+    <section class="audit_comptes">
+        <div class="titre2">
+            <h2 class="titre-texte" id="audit_comptes"><span>A</span>udit et Commissariat aux Comptes</h2>
+        </div>
+        <p class="service-intro">Nos auditeurs allient leurs connaissances et compétences techniques pour atteindre un très haut niveau de qualité et d’expertise dans la réalisation de leurs missions.</p>
+    </section>
+
+    <div class="services-grid">
+        <div class="service-item">
+            <div class="service-img" style="background-image: url('./images/audit_legal.jpg');"></div>
+            <div class="service-title">Audit légal / Audit comptable et financier</div>
+            <div class="service-description">
+                <p>L’information comptable et financière joue un rôle prépondérant pour diriger de façon optimale une organisation.</p>
+            </div>
+        </div>
+
+        <div class="service-item">
+            <div class="service-img" style="background-image: url('./images/audit_acquisition.jpg');"></div>
+            <div class="service-title">Audit d’acquisition</div>
+            <div class="service-description">
+                <p>Lors de la due diligence, nous examinons les aspects comptables, fiscaux, sociaux, environnementaux et techniques.</p>
+            </div>
+        </div>
+
+        <div class="service-item">
+            <div class="service-img" style="background-image: url('./images/audit_organisationnel.jpg');"></div>
+            <div class="service-title">Audit organisationnel</div>
+            <div class="service-description">
+                <p>Notre analyse de votre organisation interne vise à évaluer son efficacité, ses processus, et son fonctionnement global.</p>
+            </div>
+        </div>
+
+        <div class="service-item">
+            <div class="service-img" style="background-image: url('./images/audit_gouvernance.jpg');"></div>
+            <div class="service-title">Audit de la gouvernance</div>
+            <div class="service-description">
+                <p>Notre diagnostic vise à évaluer l'efficacité des mécanismes de gouvernance d'une organisation.</p>
+            </div>
+        </div>
+
+        <div class="service-item">
+            <div class="service-img" style="background-image: url('./images/audit_si.jpg');"></div>
+            <div class="service-title">Audit du Système d’Information</div>
+            <div class="service-description">
+                <p>Notre audit du système d’information est un outil essentiel pour maîtriser les risques et optimiser les performances.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Conseil -->
+    <section class="conseil">
+        <div class="titre3">
+            <h2 class="titre-texte" id="conseil"><span>C</span>onseil</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-item">
+                <div class="service-img" style="background-image: url('./images/conseil_comptable.jpg');"></div>
+                <div class="service-title">Accompagnement comptable, fiscal et social</div>
+                <div class="service-description">
+                    <p>Faites confiance à KACEL CONSULTING pour l’externalisation de tout ou partie des activités de gestion comptable, fiscale et sociale.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-img" style="background-image: url('./images/implantation_investisseurs.jpg');"></div>
+                <div class="service-title">Accompagnement à l’implantation d’investisseurs</div>
+                <div class="service-description">
+                    <p>Nous vous aidons à remédier aux contraintes liées à l'implantation dans un pays étranger.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-img" style="background-image: url('./images/etudes_sectorielles.jpg');"></div>
+                <div class="service-title">Études sectorielles</div>
+                <div class="service-description">
+                    <p>La mission d'études sectorielles vise à analyser un secteur d'activité spécifique pour identifier des opportunités de croissance.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-img" style="background-image: url('./images/procedures_comptables.jpg');"></div>
+                <div class="service-title">Mise en place de procédures comptables et financières</div>
+                <div class="service-description">
+                    <p>Nous établissons des procédures comptables et financières adaptées à votre entreprise.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-img" style="background-image: url('./images/controle_gestion.jpg');"></div>
+                <div class="service-title">Contrôle de gestion et pilotage</div>
+                <div class="service-description">
+                    <p>Nous vous assistons dans le suivi budgétaire, l'analyse des coûts et le suivi de la trésorerie.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-img" style="background-image: url('./images/controle_interne.jpg');"></div>
+                <div class="service-title">Évaluation et mise en place de contrôle interne</div>
+                <div class="service-description">
+                    <p>Nous évaluons et proposons des recommandations pour renforcer le contrôle interne.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-img" style="background-image: url('./images/evaluation_entreprise.jpg');"></div>
+                <div class="service-title">Évaluation d’entreprise / Due diligence</div>
+                <div class="service-description">
+                    <p>Nous procédons à une évaluation approfondie de la situation financière, juridique et opérationnelle de l'entreprise.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-img" style="background-image: url('./images/gestion_projet.jpg');"></div>
+                <div class="service-title">Gestion de projet et conduite du changement</div>
+                <div class="service-description">
+                    <p>Nous vous aidons à planifier, organiser, et gérer les projets pour accompagner le changement.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-img" style="background-image: url('./images/strategie_finance.jpg');"></div>
+                <div class="service-title">Stratégie et finance d’entreprise</div>
+                <div class="service-description">
+                    <p>Nous accompagnons le développement de la stratégie et la gestion des ressources financières.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-img" style="background-image: url('./images/gestion_patrimoine.jpg');"></div>
+                <div class="service-title">Gestion de patrimoine</div>
+                <div class="service-description">
+                    <p>Nous vous conseillons sur les stratégies d’investissement pour optimiser votre patrimoine.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-img" style="background-image: url('./images/restructuration_entreprise.jpg');"></div>
+                <div class="service-title">Restructuration d’entreprise</div>
+                <div class="service-description">
+                    <p>Nous vous aidons à définir des scénarios de restructuration adaptés aux besoins de votre entreprise.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-img" style="background-image: url('./images/rse.jpg');"></div>
+                <div class="service-title">Accompagnement dans la démarche RSE</div>
+                <div class="service-description">
+                    <p>Nous intégrons les meilleures pratiques en matière de développement durable à vos stratégies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+
+<section class="formation" id="formation">
+    <div class="container">
+        <!-- Titre de la section -->
+        <div class="titre">
+            <h2 class="titre-texte" id="formations"><span>F</span>ormation</h2>
+            <!-- Phrase d'encouragement en gras -->
+            <p class="encouragement"><strong>Investissez en vous-même avec les formations de qualité proposées par KACEL CONSULTING.</strong></p>
+            <!-- Phrase valorisant KACEL CONSULTING en petit caractère -->
+            <p class="valorisation">KACEL CONSULTING, votre partenaire de confiance pour des formations d'excellence.</p>
+            <!-- Phrase supplémentaire -->
+            <p class="choix">Choisir KACEL CONSULTING, c'est aussi cela.</p>
+        </div>
+
+        <!-- Section avec les images et les phrases de persuasion -->
+        <div class="images-container">
+            <div class="image-box">
+                <img src="images/formation1.jpg" alt="Formation 1">
+                <p class="persuasion">Accélérez votre carrière avec nos formations certifiantes.</p>
+            </div>
+            <div class="image-box">
+                <img src="images/formation2.jpg" alt="Formation 2">
+                <p class="persuasion">Obtenez des compétences pratiques pour un avenir brillant.</p>
+            </div>
+            <div class="image-box">
+                <img src="images/formation3.jpg" alt="Formation 3">
+                <p class="persuasion">KACEL CONSULTING, un gage de succès professionnel.</p>
+            </div>
+        </div>
+
+        <!-- Bouton centré sous les images -->
+        <div class="cta-button">
+            <a href="formation.html" class="btn-formation">Se former</a>
+        </div>
+    </div>
+</section>
+
+
+<section class="secteurs-activite" id="secteurs-activite">
+    <div class="titre">
+        <h2 class="titre-texte"><span>S</span>ecteurs d'Activité</h2>
+        <p>Découvrez les secteurs d'activité dans lesquels nous opérons.</p>
+    </div>
+
+    <div class="secteurs-grid">
+        <div class="secteur-item">
+            <div class="secteur-img" style="background-image: url('./images/banque_assurance.jpg');">
+                <div class="secteur-title">Banque Assurance</div>
+            </div>
+        </div>
+
+        <div class="secteur-item">
+            <div class="secteur-img" style="background-image: url('./images/mines_energie.jpg');">
+                <div class="secteur-title">Mines, Pétrole, Énergie</div>
+            </div>
+        </div>
+
+        <div class="secteur-item">
+            <div class="secteur-img" style="background-image: url('./images/industrie.jpg');">
+                <div class="secteur-title">Industrie</div>
+            </div>
+        </div>
+
+        <div class="secteur-item">
+            <div class="secteur-img" style="background-image: url('./images/btp.jpg');">
+                <div class="secteur-title">BTP</div>
+            </div>
+        </div>
+
+        <div class="secteur-item">
+            <div class="secteur-img" style="background-image: url('./images/technologies_innovations.jpg');">
+                <div class="secteur-title">Technologies & Innovations</div>
+            </div>
+        </div>
+
+        <div class="secteur-item">
+            <div class="secteur-img" style="background-image: url('./images/autres_services.jpg');">
+                <div class="secteur-title">Autres Services</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="evenements" id="evenements">
+    <div class="titre">
+        <h2 class="titre-texte"><span>É</span>vénements</h2>
+        <p>Vous souhaitez organiser des forums d’affaires, nous vous accompagnons dans ce projet. N’hésitez pas, <a href="evenements.html">contactez-nous</a>.</p>
+    </div>
+
+    <div class="evenement-text">
+        <h3>Forum « In’ Tech » - 5 & 6 Décembre à Abidjan</h3>
+        <p>KACEL CONSULTING organise le forum « In’ Tech » portant sur les innovations et technologies appliquées aux secteurs d’activité porteurs en Côte d’Ivoire les 5 et 6 décembre à Abidjan.</p>
+        <p>KACEL CONSULTING souhaite apporter sa modeste contribution au développement de la Côte d’Ivoire et à la lutte contre le chômage des jeunes. Son apport à travers le forum consistera à :</p>
+        <ul>
+            <li>Mettre en lumière les secteurs d’activité actuellement porteurs en Côte d’Ivoire ;</li>
+            <li>Présenter les opportunités d'investissement portées sur les innovations et les technologies dans les secteurs porteurs en Côte d’Ivoire ;</li>
+            <li>Mettre en avant les bonnes pratiques et les innovations réussies dans le pays et ailleurs ;</li>
+            <li>Faire la promotion des start-up ivoiriennes ;</li>
+            <li>Encourager les échanges entre investisseurs, entrepreneurs et acteurs de l’innovation ;</li>
+            <li>Mettre en exergue les compétences locales ;</li>
+            <li>Faire le lien entre les besoins des entreprises en ressources humaines et l’offre de formation professionnelle ;</li>
+            <li>Favoriser une connexion d’affaires entre participants ;</li>
+            <li>Faciliter les partenariats entre les pays.</li>
+        </ul>
+        <div class="col13"></div>
+            <div class="img">
+                <img src="./images/evenements.jpg" alt="evenements">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact"> 
+    <div class="titre noir">
+        <h2 class="titre-texte"><span>C</span>ontact</h2>
+        <p>Pour toute information, n'hésitez pas à nous contacter.</p>
+    </div>
+    <div class="contactform">
+        <h3>Envoyer un message</h3>
+        <form id="contactForm" action="submit_contact.php" method="POST">
+            <div class="inputboite">
+                <input type="text" name="nom" placeholder="Nom" required>
+            </div>
+            <div class="inputboite">
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="inputboite">
+                <textarea name="message" placeholder="Message" required></textarea>
+            </div>
+            <div class="inputboite">
+                <input type="submit" value="Envoyer">
+            </div>
+        </form>
+        <div id="confirmationMessage" style="display:none;">
+            <p>Merci de nous avoir contactés. Nous reviendrons vers vous bientôt !</p>
+        </div>
+    </div>
+</section>
+
+<div class="copyright">
+    <p>© 2024 KACEL CONSULTING. Tous droits réservés.</p>
+    <a href="login.html" onclick="toggleMenu();">Admin</a>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

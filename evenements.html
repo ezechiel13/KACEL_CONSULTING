@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements - Forum In’Tech 2024</title>
+    <link rel="stylesheet" href="typography.css">
+    <link rel="stylesheet" href="evenements.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><span>K</span>ACEL CONSULTING</a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navbar">
+            <li class="dropdown">
+                <a href="index.html#apropos" class="dropbtn" onclick="toggleDropdown();">Pourquoi Pas Nous ?</a>
+                <div class="dropdown-content">
+                    <a href="index.html#apropos">A propos</a>
+                    <a href="index.html#expert">Experts</a>
+                    <a href="index.html#temoignage">Témoignages</a>
+                    <a href="index.html#Portefeuille">Portefeuille</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="index.html#services" class="dropbtn" onclick="toggleDropdown();">Services</a>
+                <div class="dropdown-content">
+                    <a href="index.html#audit_comptes">Audit et Commissariat aux Comptes</a>
+                    <a href="index.html#conseil">Conseil</a>
+                </div>
+            </li>
+            <li><a href="index.html#formations" class="lien_form" onclick="toggleMenu();">Formations</a></li>
+            <li><a href="index.html#secteurs-activite" onclick="toggleMenu();">Secteurs d'Activité</a></li>
+            <li><a href="index.html#evenements" class="lien_even" onclick="toggleMenu();">Événements</a></li>
+            <li><a href="index.html#contact" onclick="toggleMenu();">Contact</a></li>
+          </ul>
+    </header>
+ 
+    <section class="banniere_evenements" id="banniere"> 
+        <div class="contenu">
+            <h2>Bienvenue dans l'espace Événements</h2>
+            <div class="onglets">
+                <button class="onglet active" onclick="openTab(event, 'presentation')">Présentation</button>
+                <button class="onglet" onclick="openTab(event, 'programme')">Programme</button>
+                <button class="onglet" onclick="openTab(event, 'inscription')">Inscription</button>
+                <button class="onglet" onclick="openTab(event, 'partenaires')">Partenaires et Sponsors</button>
+                <button class="onglet" onclick="openTab(event, 'galerie')">Galerie</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="event-detail">
+        <div id="presentation" class="contenu-onglet show">
+            <h2>Présentation du Forum In’Tech 2024</h2>
+            <p>KACEL CONSULTING organise le forum In’Tech, forum d’affaires axé sur les innovations et les technologies destinés aux acteurs suivants :</p>
+            <ul>
+                <li>Les investisseurs, entrepreneurs et acteurs de l'innovation et des technologies</li>
+                <li>Les entreprises ivoiriennes à la recherche de partenariats</li>
+                <li>Les entreprises et investisseurs étrangers à la recherche d’opportunités en Côte d’Ivoire</li>
+                <li>Les entreprises à la recherche de financements et de promotions</li>
+            </ul>
+            <p>Nous attendons 250 participants représentant une variété de secteurs de Côte d’Ivoire et d’autres pays.</p>
+            <p>Les innovations et les technologies sont des accélérateurs de développement pour notre pays. Le thème choisi pour cette édition 2024 est : <em>« Quels sont les facteurs déterminants pour optimiser les investissements en termes d’innovations et de technologies en Côte d’Ivoire ? »</em></p>
+            <p>Des experts et spécialistes de plusieurs pays répondront à cette problématique et partageront leurs expériences.</p>
+            <p><strong>Tarif :</strong> 150 000 F CFA</p>
+            <div class="onglets">
+                <button class="onglet" onclick="openTab(event, 'programme')">Programme</button>
+                <button class="onglet" onclick="openTab(event, 'inscription')">Inscription</button>
+                <button class="onglet" onclick="openTab(event, 'partenaires')">Partenaires et Sponsors</button>
+            </div>
+        </div>
+    
+    
+        <!-- Onglet Programme -->
+        <div id="programme" class="contenu-onglet">
+            <h2>Programme du Forum In’Tech 2024</h2>
+            <p>Découvrez le programme détaillé de notre forum :</p>
+            <a href="documents/programme.pdf" class="btn1" download>Télécharger le programme du forum</a>
+        </div>
+    
+        <!-- Onglet Inscription -->
+        <div id="inscription" class="contenu-onglet">
+            <h2>Inscription au Forum</h2>
+            <form id="inscriptionForm" action="process_inscription.php" method="post">
+                <h3>Informations professionnelles</h3>
+                <label for="nom_de_l_entreprise">Nom de l'entreprise</label>
+                <input type="text" id="nom_de_l_entreprise" name="nom_de_l_entreprise" required>
+    
+                <label for="secteur_d_activite">Secteur d'activité</label>
+                <input type="text" id="secteur_d_activite" name="secteur_d_activite" required>
+    
+                <label for="description_de_l_entreprise">Description de l’entreprise</label>
+                <textarea id="description_de_l_entreprise" name="description_de_l_entreprise" required></textarea>
+    
+                <label for="poste_occupe">Poste occupé</label>
+                <input type="text" id="poste_occupe" name="poste_occupe" required>
+    
+                <h3>Informations Personnelles</h3>
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" required>
+    
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" required>
+    
+                <label for="email">Adresse e-mail</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="telephone">Numéro de téléphone</label>
+                <input type="tel" id="telephone" name="telephone" required>
+    
+                <h3>Préférences et Intérêts</h3>
+                <label for="source">Comment avez-vous entendu parler de nous ?</label>
+                <select id="source" name="source">
+                    <option value="reseaux_sociaux">Réseaux sociaux</option>
+                    <option value="recommandations">Recommandations</option>
+                    <option value="publicites">Publicités</option>
+                    <option value="autres">Autre</option>
+                </select>
+    
+                <label for="thematiques_d_interet">Thématiques d'intérêt :</label>
+                <div id="thematiques_d_interet">
+                    <input type="checkbox" id="finance" name="thematiques_d_interet[]" value="finance">
+                    <label for="finance">Finance</label><br>
+                    <input type="checkbox" id="marketing" name="thematiques_d_interet[]" value="marketing">
+                    <label for="marketing">Marketing</label><br>
+                    <input type="checkbox" id="innovation" name="thematiques_d_interet[]" value="innovation">
+                    <label for="innovation">Innovation</label><br>
+                </div>
+    
+                <h3>Rencontres B2B</h3>
+                <p>Les types d’entreprises avec lesquelles vous souhaiteriez être mis en contact :</p>
+                <div id="b2b">
+                    <input type="checkbox" id="banque" name="b2b[]" value="banque">
+                    <label for="banque">Banque</label><br>
+                    <input type="checkbox" id="assurance" name="b2b[]" value="assurance">
+                    <label for="assurance">Assurance</label><br>
+                    <input type="checkbox" id="industries" name="b2b[]" value="industries">
+                    <label for="industries">Industries</label><br>
+                    <input type="checkbox" id="services" name="b2b[]" value="services">
+                    <label for="services">Services</label><br><br>
+                    <label for="autres">Autres :</label><br><br>
+                    <textarea id="autres" name="autres" placeholder="Décrivez les autres types d'entreprises avec lesquelles vous souhaitez être mis en contact"></textarea>
+                </div>
+    
+                <input type="submit" value="Soumettre">
+                <p id="formMessage">Message : Nous vous contacterons pour la poursuite de votre inscription.</p>
+            </form>
+        </div>
+    
+        <!-- Onglet Partenaires et sponsors -->
+        <div id="partenaires" class="contenu-onglet">
+            <h2>Partenaires et Sponsors</h2>
+            <form id="partenairesForm" action="process_partenaires.php" method="post">
+                <label for="nom_de_societe">Nom de société</label>
+                <input type="text" id="nom_de_societe" name="nom_de_societe" required>
+        
+                <label for="nom_et_prenom">Votre nom et prénom</label>
+                <input type="text" id="nom_et_prenom" name="nom_et_prenom" required>
+        
+                <label for="telephone">Votre numéro de téléphone</label>
+                <input type="tel" id="telephone" name="telephone" required>
+        
+                <label for="email">Votre email</label>
+                <input type="email" id="email" name="email" required>
+        
+                <a href="documents/fiche_sponsoring.pdf" class="btn1" download>Télécharger la fiche de sponsoring</a>
+        
+                <input type="submit" value="Soumettre">
+            </form>
+            <p id="formMessagePartenaires">Message : Nous vous contacterons pour la poursuite de votre inscription.</p> 
+        </div>
+
+<!-- Onglet Galerie -->
+<div id="galerie" class="contenu-onglet">
+    <h2>Galerie Événements</h2>
+
+    <div class="gallery-grid">
+        <!-- Ghana CEO SUMMIT -->
+        <div class="event">
+            <h3>Ghana CEO SUMMIT 22/05/2023, Accra, Ghana</h3>
+            <div class="event-images">
+                <a href="images/ghana_ceo_1.jpg" data-lightbox="galerie" class="lightbox">
+                    <img src="images/ghana_ceo_1.jpg" alt="Ghana CEO SUMMIT Image 1">
+                </a>
+                <a href="images/ghana_ceo_2.jpg" data-lightbox="galerie" class="lightbox">
+                    <img src="images/ghana_ceo_2.jpg" alt="Ghana CEO SUMMIT Image 2">
+                </a>
+            </div>
+        </div>
+
+        <!-- JNDA Bordeaux -->
+        <div class="event">
+            <h3>Les Journées Nationales des Diasporas et de l'Afrique (JNDA), 15-17 Juin 2023, Bordeaux, France</h3>
+            <div class="event-images">
+                <a href="images/jnda_1.jpg" data-lightbox="galerie" class="lightbox">
+                    <img src="images/jnda_1.jpg" alt="JNDA Bordeaux Image 1">
+                </a>
+                <a href="images/jnda_2.jpg" data-lightbox="galerie" class="lightbox">
+                    <img src="images/jnda_2.jpg" alt="JNDA Bordeaux Image 2">
+                </a>
+                <a href="images/jnda_3.jpg" data-lightbox="galerie" class="lightbox">
+                    <img src="images/jnda_3.jpg" alt="JNDA Bordeaux Image 3">
+                </a>
+            </div>
+        </div>
+
+        <!-- FORUM African Business Day (ABD) -->
+        <div class="event">
+            <h3>FORUM African Business Day (ABD) 2023, 20/06/2023, Baden, Suisse</h3>
+            <div class="event-images">
+                <a href="images/abd_1.jpg" data-lightbox="galerie" class="lightbox">
+                    <img src="images/abd_1.jpg" alt="ABD 2023 Image 1">
+                </a>
+                <a href="images/abd_2.jpg" data-lightbox="galerie" class="lightbox">
+                    <img src="images/abd_2.jpg" alt="ABD 2023 Image 2">
+                </a>
+                <a href="images/abd_3.jpg" data-lightbox="galerie" class="lightbox">
+                    <img src="images/abd_3.jpg" alt="ABD 2023 Image 3">
+                </a>
+                <a href="images/abd_4.jpg" data-lightbox="galerie" class="lightbox">
+                    <img src="images/abd_4.jpg" alt="ABD 2023 Image 4">
+                </a>
+                <a href="images/abd_5.jpg" data-lightbox="galerie" class="lightbox">
+                    <img src="images/abd_5.jpg" alt="ABD 2023 Image 5">
+                </a>
+            </div>
+        </div>
+
+        <!-- HACSA SUMMIT -->
+        <div class="event">
+            <h3>HACSA SUMMIT 2023, 24/07/2023, Accra, Ghana (Paneliste)</h3>
+            <div class="event-images">
+                <a href="images/hacsa_1.jpg" data-lightbox="galerie" class="lightbox">
+                    <img src="images/hacsa_1.jpg" alt="HACSA SUMMIT 2023 Image 1">
+                </a>
+                <a href="images/hacsa_2.jpg" data-lightbox="galerie" class="lightbox">
+                    <img src="images/hacsa_2.jpg" alt="HACSA SUMMIT 2023 Image 2">
+                </a>
+                <a href="images/hacsa_3.jpg" data-lightbox="galerie" class="lightbox">
+                    <img src="images/hacsa_3.jpg" alt="HACSA SUMMIT 2023 Image 3">
+                </a>
+            </div>
+        </div>
+
+        <!-- Africa Business Singapore Forum -->
+        <div class="event">
+            <h3>Africa Business Singapore forum, 29-31 Août 2023, Singapour</h3>
+            <div class="event-images">
+                <a href="images/singapore_forum_1.jpg" data-lightbox="galerie" class="lightbox">
+                    <img src="images/singapore_forum_1.jpg" alt="Africa Business Singapore forum Image 1">
+                </a>
+                <a href="images/singapore_forum_2.jpg" data-lightbox="galerie" class="lightbox">
+                    <img src="images/singapore_forum_2.jpg" alt="Africa Business Singapore forum Image 2">
+                </a>
+                <a href="images/singapore_forum_3.jpg" data-lightbox="galerie" class="lightbox">
+                    <img src="images/singapore_forum_3.jpg" alt="Africa Business Singapore forum Image 3">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+    
+    <div class="copyright">
+        <p>© 2024 KACEL CONSULTING. Tous droits réservés.</p>
+        <a href="login.html" onclick="toggleMenu();">Admin</a>
+    </div>
+    
+    <script src="evenements.js"></script>
+</body>
+</html>
